@@ -36,7 +36,7 @@ public class ZeroServer {
     }
 
     @PostConstruct
-    public void receive() {
+    public Client receive() {
         byte[] bytes;
         Client client = null;
         ZMQ.Socket socket = createSocket();
@@ -49,5 +49,6 @@ public class ZeroServer {
             }
             log.info("Received: [ " + client + " ]");
         }
+        return client;
     }
 }
