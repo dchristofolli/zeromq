@@ -38,7 +38,7 @@ public class ZeroServer {
     @PostConstruct
     public Client receive() {
         byte[] bytes;
-        Client client = null;
+        Client client = new Client();
         ZMQ.Socket socket = createSocket();
         while (!Thread.currentThread().isInterrupted()){
             try {
