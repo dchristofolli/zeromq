@@ -1,0 +1,3 @@
+messaging:
+  server:
+    address: tcp://*:5555
